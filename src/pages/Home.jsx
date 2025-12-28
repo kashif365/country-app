@@ -1,4 +1,4 @@
-import { HeroSection } from "../Components/UI/heroSection";
+import { HeroSection } from "../Components/UI/HeroSection";
 import { About } from "./About";
 
 export const Home = () => {
