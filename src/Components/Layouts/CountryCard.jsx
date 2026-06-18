@@ -1,23 +1,15 @@
 export const CountryCard = ({ country }) => {
-  const { flags, name, population, region, capital } = country;
+  const { country: countryName, cities } = country;
   return (
     <li className="country-card card">
       <div className="container-card bg-white-box">
-        <img src={flags.svg} alt={flags.alt} />
         <div className="countryInfo">
-          <p className="card-title">{name.common}</p>
+          <p className="card-title">{countryName}</p>
           <p>
-            <span className="card-description">Population:</span>
-            {population.toLocaleString()}
+            <span className="card-description">Cities:</span>
+            {cities.length}
           </p>
-          <p>
-            <span className="card-description">Capital:</span>
-            {capital && capital[0]}
-          </p>
-          <p>
-            <span className="card-description">Region:</span>
-            {region}
-          </p>
+          <p>{cities.slice(0, 5).join(", ")}</p>
         </div>
       </div>
     </li>
